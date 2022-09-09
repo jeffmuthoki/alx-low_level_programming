@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Determines whether a random number is positive, negtaive or zero.
+ * main -checks if a number is positive, negtaive or zero.
  *
  * Return: 0 on success
  */
@@ -11,8 +11,9 @@ int main (void)
 	int n;
 
 	srand(time(0));
-	n=rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 	/* code goes here*/
+	
 	if (n<0)
 	{
 		printf("%d is %s\n", n, "negative");
@@ -27,3 +28,4 @@ int main (void)
 	}
 	return (0);
 }
+
