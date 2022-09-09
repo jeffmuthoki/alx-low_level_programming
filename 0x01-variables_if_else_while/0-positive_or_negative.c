@@ -6,7 +6,7 @@
  *
  * Return: 0 on success
  */
-int main (void)
+int main(void)
 {
 	int n;
 
@@ -14,11 +14,11 @@ int main (void)
 	n = rand() - RAND_MAX / 2;
 	/* code goes here*/
 	
-	if (n<0)
+	if (n < 0)
 	{
 		printf("%d is %s\n", n, "negative");
 	}
-	else if (n>0)
+	else if (n > 0)
 	{
 		printf("%d is %s\n", n, "positive");
 	}
