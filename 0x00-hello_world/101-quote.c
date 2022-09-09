@@ -2,7 +2,6 @@
 
 /**
  * main - prints a text
- *
  * Return: Always 1
  */
 int main(void)
