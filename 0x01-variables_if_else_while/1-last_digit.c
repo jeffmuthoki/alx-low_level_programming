@@ -5,7 +5,7 @@
  * main - check if last digit of random number is
  * greater than or less than 5, or if it is 0
  *
- * 
+ *
  * Return: 0 on success
  */
 int main(void)
@@ -20,7 +20,7 @@ int main(void)
 	{
 		printf("greater than 5\n");
 	}
-	else if (n % 10 ==0)
+	else if (n % 10 == 0)
 	{
 		printf("0\n");
 	}
