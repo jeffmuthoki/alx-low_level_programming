@@ -9,23 +9,24 @@ void print_number(int n)
 
 	res = n;
 	expo = len =  1;
-
+/*Check the negatives*/
 	if (res < 0)
 	{
 		res *= -1;
 		_putchar('-');
 	}
 
+/**/	
 	temp = res;
 	while (temp >= 10)
 	{
 		len++;
 		temp /= 10;
 	}
-
+/*Create Exponent*/
 	for (i = 1; i < len; i++)
 		expo *= 10;
-
+/*Main*/
 	while (expo > 1)
 	{
 		_putchar((res / expo) % 10 + '0');
