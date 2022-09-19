@@ -6,7 +6,6 @@
  * Return: string
  */
 void _puts(char *str)
-
 {
 	int i;
 
