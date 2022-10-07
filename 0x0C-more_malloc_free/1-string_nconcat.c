@@ -12,40 +12,32 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p;
-	int strlen1, i, c;
-
+	char *s;
+	unsigned int i, size1 = 0, size2 = 0;
+/*checking if the 2 strings are empty */
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+/* calculating the length of both strings */
+	while (*(s1 + size1) != '\0')
+		size1++;
+	while (*(s2 + size2) != '\0')
+		size2++;
 
-	strlen1 = (unsigned int)_strlen(s1);
-	p = malloc((strlen1 + n + 1) * sizeof(char));
-	if (p == NULL)
-		return (NULL);
-	for (i = 0, c = 0; i < (strlen1 + n); i++)
-	{
-		if (i < strlen1)
-			p[i] = s1[i];
-		else
-			p[i] = s2[c++];
-	}
-	p[i] = '\0';
+	if (size2 >= n)
+		size2 = n;
+/* allocating the needed memory for the 2 strings*/
+	s = malloc(size1 + n + 1);
+	if (s == NULL)
+		return (s);
+/* copying the first string to the allacoted memory */
+	for (i = 0; i < size1; i++)
+		s[i] = s1[i];
 
-	return (p);
-}
+	for (i = 0; i < n; i++)
+		s[i + size1] = s2[i];
 
-/**
- * _strlen - find length of string
- * @s: string
- * Return: length of string
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	return (i);
+	s[size1 + i] = '\0';
+	return (s);
 }
